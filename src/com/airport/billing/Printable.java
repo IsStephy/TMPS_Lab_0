@@ -1,5 +1,5 @@
 package billing;
 
-interface Printable {
+public interface Printable {
     String formatForPrint();
 }

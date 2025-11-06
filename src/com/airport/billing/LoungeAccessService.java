@@ -26,4 +26,13 @@ class LoungeAccessService extends ExtraService implements DiscountApplicable {
         }
         return super.formatForPrint();
     }
+
+    @Override
+    public LoungeAccessService clone() {
+        LoungeAccessService cloned = new LoungeAccessService();
+        if (this.price < this.originalPrice) {
+            cloned.applyDiscount((1 - this.price / this.originalPrice) * 100);
+        }
+        return cloned;
+    }
 }

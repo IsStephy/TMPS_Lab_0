@@ -23,4 +23,7 @@ abstract class ExtraService implements BillableItem, Printable {
     public String formatForPrint() {
         return String.format("%-50s $%.2f", getDescription(), getPrice());
     }
+    
+    @Override
+    public abstract ExtraService clone();
 }

@@ -20,7 +20,6 @@ class PaymentProcessor {
     }
 
     public boolean validatePayment(String paymentMethod, double amount) {
-        // Simplified validation logic
         return paymentMethod != null && !paymentMethod.isEmpty() && amount > 0;
     }
 }

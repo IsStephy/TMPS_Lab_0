@@ -1,6 +1,7 @@
 package billing;
 
-interface BillableItem {
+public interface BillableItem {
     String getDescription();
     double getPrice();
+    BillableItem clone();
 }

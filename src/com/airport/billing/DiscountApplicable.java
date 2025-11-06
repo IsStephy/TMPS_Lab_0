@@ -1,6 +1,6 @@
 package billing;
 
-interface DiscountApplicable {
+public interface DiscountApplicable {
     void applyDiscount(double percentage);
     double getOriginalPrice();
 }

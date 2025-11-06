@@ -16,6 +16,13 @@ class Ticket implements BillableItem, Printable {
         this.price = price;
     }
 
+
+    @Override
+    public Ticket clone() {
+        return new Ticket(this.passengerName, this.flightNumber,
+                this.destination, this.departureDate, this.price);
+    }
+
     @Override
     public String getDescription() {
         return String.format("Flight Ticket - %s to %s (Flight: %s, Date: %s)",
@@ -38,5 +45,8 @@ class Ticket implements BillableItem, Printable {
 
     public String getFlightNumber() {
         return flightNumber;
+    }
+    public void setPassengerName(String passengerName) {
+        this.passengerName = passengerName;
     }
 }
