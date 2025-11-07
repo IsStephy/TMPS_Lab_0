@@ -1,14 +1,13 @@
-package billing;
+package com.airport.billing.domain.services;
 
-class CarRentalService extends ExtraService implements DiscountApplicable {
-    private int days;
-    private double pricePerDay;
+import com.airport.billing.domain.models.ExtraService;
+import com.airport.billing.domain.models.DiscountApplicable;
+
+public class LoungeAccessService extends ExtraService implements DiscountApplicable {
     private double originalPrice;
 
-    public CarRentalService(int days, double pricePerDay) {
-        super(String.format("Car Rental (%d days)", days), days * pricePerDay);
-        this.days = days;
-        this.pricePerDay = pricePerDay;
+    public LoungeAccessService() {
+        super("VIP Lounge Access", 45.00);
         this.originalPrice = this.price;
     }
 
@@ -32,8 +31,8 @@ class CarRentalService extends ExtraService implements DiscountApplicable {
     }
 
     @Override
-    public CarRentalService clone() {
-        CarRentalService cloned = new CarRentalService(this.days, this.pricePerDay);
+    public LoungeAccessService clone() {
+        LoungeAccessService cloned = new LoungeAccessService();
         if (this.price < this.originalPrice) {
             cloned.applyDiscount((1 - this.price / this.originalPrice) * 100);
         }

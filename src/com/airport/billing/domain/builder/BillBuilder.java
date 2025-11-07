@@ -1,8 +1,12 @@
-package billing;
+package com.airport.billing.domain.builder;
 
+import com.airport.billing.domain.models.Bill;
+import com.airport.billing.domain.models.Ticket;
+import com.airport.billing.domain.models.ExtraService;
+import com.airport.billing.domain.models.BillableItem;
 import java.util.List;
 
-class BillBuilder {
+public class BillBuilder {
     private Bill bill;
 
     public BillBuilder(String billId) {

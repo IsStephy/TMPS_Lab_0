@@ -1,5 +1,10 @@
-package billing;
+package com.airport.billing.client;
 
+import com.airport.billing.domain.models.*;
+import com.airport.billing.domain.services.*;
+import com.airport.billing.domain.factory.*;
+import com.airport.billing.domain.builder.BillBuilder;
+import com.airport.billing.utils.*;
 
 public class AirportBillingSystem {
 
@@ -23,8 +28,8 @@ public class AirportBillingSystem {
                 System.out.println("\n" + "=".repeat(62));
                 System.out.println("Choose billing mode:");
                 System.out.println("  1. Manual Mode (enter each item)");
-                System.out.println("  2. Package Mode (use predefined packages)");
-                System.out.println("  3. Clone Previous Bill (Prototype Pattern)");
+                System.out.println("  2. Clone Previous Bill (Prototype Pattern)");
+                System.out.println("  3. Package Mode (use predefined packages)");
                 System.out.println("=".repeat(62));
 
                 int mode = input.readChoice("Select mode (1-3): ", 1, 3);
@@ -34,9 +39,9 @@ public class AirportBillingSystem {
                 if (mode == 1) {
                     bill = createBillManually();
                 } else if (mode == 2) {
-                    bill = createBillWithPackage();
-                } else {
                     bill = createBillFromPrototype();
+                } else {
+                    bill = createBillWithPackage();
                 }
 
                 if (bill != null) {
@@ -219,7 +224,7 @@ public class AirportBillingSystem {
     }
 
     private static Ticket createTicketFromInput() {
-        System.out.println("\n━".repeat(62));
+        System.out.println("━".repeat(62));
         System.out.println("📋 TICKET INFORMATION");
         System.out.println("━".repeat(62));
 
@@ -233,7 +238,7 @@ public class AirportBillingSystem {
     }
 
     private static void addExtraServicesManually(BillBuilder builder) {
-        System.out.println("\n━".repeat(62));
+        System.out.println("━".repeat(62));
         System.out.println("🛍️  EXTRA SERVICES");
         System.out.println("━".repeat(62));
 
@@ -304,7 +309,7 @@ public class AirportBillingSystem {
     }
 
     private static void displayBillSummary(Bill bill) {
-        System.out.println("\n━".repeat(62));
+        System.out.println("━".repeat(62));
         System.out.println("📊 BILL SUMMARY");
         System.out.println("━".repeat(62));
         System.out.println("Bill ID: " + bill.getBillId());
@@ -313,13 +318,13 @@ public class AirportBillingSystem {
         for (BillableItem item : bill.getItems()) {
             printer.printItemSummary(item);
         }
-        System.out.println("\n" + "-".repeat(62));
+        System.out.println("-".repeat(62));
         System.out.println("TOTAL AMOUNT: $" + String.format("%.2f", bill.calculateTotal()));
         System.out.println("-".repeat(62));
     }
 
     private static String selectPaymentMethod() {
-        System.out.println("\n━".repeat(62));
+        System.out.println("━".repeat(62));
         System.out.println("💳 PAYMENT METHOD");
         System.out.println("━".repeat(62));
         System.out.println("  1. Credit Card");

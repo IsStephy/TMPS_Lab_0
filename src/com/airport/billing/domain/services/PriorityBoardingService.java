@@ -1,6 +1,8 @@
-package billing;
+package com.airport.billing.domain.services;
 
-class PriorityBoardingService extends ExtraService {
+import com.airport.billing.domain.models.ExtraService;
+
+public class PriorityBoardingService extends ExtraService {
     public PriorityBoardingService() {
         super("Priority Boarding", 25.00);
     }

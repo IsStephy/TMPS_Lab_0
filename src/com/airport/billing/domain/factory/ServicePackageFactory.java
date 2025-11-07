@@ -1,4 +1,6 @@
-package billing;
+package com.airport.billing.domain.factory;
+
+import com.airport.billing.domain.models.ExtraService;
 
 public interface ServicePackageFactory {
     ExtraService createPrimaryService();

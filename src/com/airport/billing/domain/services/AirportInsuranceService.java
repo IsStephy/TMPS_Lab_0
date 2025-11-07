@@ -1,6 +1,8 @@
-package billing;
+package com.airport.billing.domain.services;
 
-class AirportInsuranceService extends ExtraService {
+import com.airport.billing.domain.models.ExtraService;
+
+public class AirportInsuranceService extends ExtraService {
     public AirportInsuranceService() {
         super("Travel Insurance", 15.00);
     }
@@ -10,4 +12,3 @@ class AirportInsuranceService extends ExtraService {
         return new AirportInsuranceService();
     }
 }
-

@@ -1,6 +1,6 @@
-package billing;
+package com.airport.billing.domain.models;
 
-abstract class ExtraService implements BillableItem, Printable {
+public abstract class ExtraService implements BillableItem, Printable {
     protected String serviceName;
     protected double price;
 
@@ -23,7 +23,7 @@ abstract class ExtraService implements BillableItem, Printable {
     public String formatForPrint() {
         return String.format("%-50s $%.2f", getDescription(), getPrice());
     }
-    
+
     @Override
     public abstract ExtraService clone();
 }

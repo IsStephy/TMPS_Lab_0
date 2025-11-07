@@ -1,6 +1,8 @@
-package billing;
+package com.airport.billing.domain.services;
 
-class LuggageService extends ExtraService {
+import com.airport.billing.domain.models.ExtraService;
+
+public class LuggageService extends ExtraService {
     private int weightKg;
     private double pricePerKg;
 

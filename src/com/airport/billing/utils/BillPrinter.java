@@ -1,8 +1,11 @@
-package billing;
+package com.airport.billing.utils;
 
+import com.airport.billing.domain.models.Bill;
+import com.airport.billing.domain.models.BillableItem;
+import com.airport.billing.domain.models.Printable;
 import java.time.format.DateTimeFormatter;
 
-class BillPrinter {
+public class BillPrinter {
 
     public void printBill(Bill bill, String transactionId) {
         System.out.println("\n");

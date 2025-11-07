@@ -1,8 +1,8 @@
-package billing;
+package com.airport.billing.utils;
 
 import java.util.Scanner;
 
-class InputHandler {
+public class InputHandler {
     private Scanner scanner;
 
     public InputHandler() {

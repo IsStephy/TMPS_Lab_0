@@ -1,6 +1,8 @@
-package billing;
+package com.airport.billing.utils;
 
-class PaymentProcessor {
+import com.airport.billing.domain.models.Bill;
+
+public class PaymentProcessor {
     private static int transactionCounter = 1000;
 
     public String processPayment(Bill bill, String paymentMethod) {

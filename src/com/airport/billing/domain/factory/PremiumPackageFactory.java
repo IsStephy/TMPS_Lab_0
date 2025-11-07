@@ -1,6 +1,10 @@
-package billing;
+package com.airport.billing.domain.factory;
 
-class PremiumPackageFactory implements ServicePackageFactory {
+import com.airport.billing.domain.models.ExtraService;
+import com.airport.billing.domain.services.LoungeAccessService;
+import com.airport.billing.domain.services.CarRentalService;
+
+public class PremiumPackageFactory implements ServicePackageFactory {
     @Override
     public ExtraService createPrimaryService() {
         LoungeAccessService lounge = new LoungeAccessService();

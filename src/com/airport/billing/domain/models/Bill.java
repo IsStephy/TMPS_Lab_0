@@ -1,10 +1,10 @@
-package billing;
+package com.airport.billing.domain.models;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-class Bill {
+public class Bill {
     private List<BillableItem> items;
     private String billId;
     private LocalDateTime createdAt;

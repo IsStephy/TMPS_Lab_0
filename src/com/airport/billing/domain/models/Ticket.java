@@ -1,6 +1,6 @@
-package billing;
+package com.airport.billing.domain.models;
 
-class Ticket implements BillableItem, Printable {
+public class Ticket implements BillableItem, Printable {
     private String passengerName;
     private String flightNumber;
     private String destination;
@@ -46,6 +46,7 @@ class Ticket implements BillableItem, Printable {
     public String getFlightNumber() {
         return flightNumber;
     }
+
     public void setPassengerName(String passengerName) {
         this.passengerName = passengerName;
     }
