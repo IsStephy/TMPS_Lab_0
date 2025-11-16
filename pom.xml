@@ -22,7 +22,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.airport.billing.client.AirportBillingSystem</mainClass>
+                    <mainClass>com.fileviewer.FileViewerApp.java</mainClass>
                 </configuration>
             </plugin>
         </plugins>
