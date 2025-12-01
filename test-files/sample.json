@@ -1,0 +1,29 @@
+{
+  "course": "Software Design Patterns",
+  "university": "Technical University of Moldova",
+  "laboratory": {
+    "number": 3,
+    "topic": "Behavioral Design Patterns",
+    "patterns": [
+      {
+        "name": "Strategy",
+        "category": "Behavioral",
+        "purpose": "Define a family of algorithms, encapsulate each one, and make them interchangeable"
+      },
+      {
+        "name": "Template Method",
+        "category": "Behavioral",
+        "purpose": "Define the skeleton of an algorithm, deferring some steps to subclasses"
+      },
+      {
+        "name": "Chain of Responsibility",
+        "category": "Behavioral",
+        "purpose": "Avoid coupling the sender to receiver by giving multiple objects a chance to handle request"
+      }
+    ]
+  },
+  "student": {
+    "focus": "Computer Science",
+    "year": 2024
+  }
+}

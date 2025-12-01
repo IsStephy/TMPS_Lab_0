@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<laboratory>
+    <course>Software Design Patterns</course>
+    <university>Technical University of Moldova</university>
+    <topic>Behavioral Design Patterns</topic>
+    <patterns>
+        <pattern>
+            <name>Strategy</name>
+            <type>Behavioral</type>
+            <description>Defines a family of algorithms and makes them interchangeable</description>
+        </pattern>
+        <pattern>
+            <name>Template Method</name>
+            <type>Behavioral</type>
+            <description>Defines the skeleton of an algorithm in a method</description>
+        </pattern>
+        <pattern>
+            <name>Chain of Responsibility</name>
+            <type>Behavioral</type>
+            <description>Chains objects to handle requests sequentially</description>
+        </pattern>
+    </patterns>
+    <implementation>
+        <language>Java</language>
+        <version>17</version>
+    </implementation>
+</laboratory>

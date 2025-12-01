@@ -1,0 +1,24 @@
+Behavioral Design Patterns Laboratory
+=====================================
+
+This is a sample text file for testing the behavioral design patterns.
+
+Patterns Implemented:
+1. Strategy Pattern - Different file reading strategies
+2. Template Method Pattern - File viewer algorithm skeleton
+3. Chain of Responsibility - File validation handlers
+
+The Strategy pattern defines a family of algorithms, encapsulates each one,
+and makes them interchangeable. Strategy lets the algorithm vary independently
+from clients that use it.
+
+The Template Method pattern defines the skeleton of an algorithm in a method,
+deferring some steps to subclasses. Template Method lets subclasses redefine
+certain steps of an algorithm without changing the algorithm's structure.
+
+The Chain of Responsibility pattern avoids coupling the sender of a request
+to its receiver by giving more than one object a chance to handle the request.
+Chain the receiving objects and pass the request along the chain until an
+object handles it.
+
+These patterns promote loose coupling and flexibility in software design.
